@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="div"></div>
+<button onclick="userRequest()" >Get response</button>
+
+<script>
+  async function userRequest() {
+    div.innerHTML = 'Waiting for response...';
+
+    try {
+      div.innerHTML += await serverResponse();
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+  function serverResponse() {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => resolve('Response form server'), 2000)
+    })
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+#player, #player2 {
+    width: 40px;
+    height: 40px;
+    background: green;;
+    position: fixed;
+    left: 8px;
+    top: 80px;
+}
+
+#player2 {
+    background: aqua;
+    position: fixed;
+    left: 200px;
+    top: 200px;
+}
+
+#viewport {
+    width: 400px;
+    height: 400px;
+    background: cadetblue;
+}
+
+.selected {
+    border: 1px solid red;
+}

@@ -1,0 +1,54 @@
+table {
+    border-collapse: collapse;
+    width: 400px;
+    margin-bottom: 40px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.head td {
+    background: #e1e1e1;
+}
+
+td:last-child {
+    width: 40px;
+    content: 'hello';
+}
+
+tr{
+    height: 40px;
+}
+
+input{
+    box-sizing: border-box;
+    margin-right: -5px;
+    border: 1px solid black;
+    width: 400px;
+    height: 40px;
+}
+
+#btn {
+    background: #33da33;
+    width: 100px;
+}
+
+#btn:hover {
+    background: #14c214;
+}
+
+#btn:active{
+    background: green;
+}
+
+.delete {
+    color: red;
+    font-size: 30px;
+    text-align: center;
+}
+
+.delete:hover{
+    cursor: pointer;
+    background: #f3a4a4;
+}

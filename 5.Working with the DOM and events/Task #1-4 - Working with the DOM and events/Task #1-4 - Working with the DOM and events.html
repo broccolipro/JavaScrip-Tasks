@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<!--Задача №1 - событие загрузки документа и обращение к элементам DOM-->
+<!--Сразу после открытия документа, установить красный цвет фона страницы.-->
+<!--(задачи 1-4 выполнить в одном документе)-->
+
+<!--Задача №2 - событие загрузки документа и обращение к элементам DOM-->
+<!--Через 3 секунды после загрузки страницы, установить цвет фона в зеленый.-->
+
+<!--Задача №3 - событие click-->
+<!--Добавить кнопку с текстом Orange, при нажатии на которой, цвет страницы становится оранжевым.-->
+
+<!--Задача №4 - добавление элементов в DOM-->
+<!--Добавить в странице нумерованный список(ol). После открытия страницы, каждые 2 секунды, в список -->
+<!--добавится новый элемент (li) с текстом `Элемент ${i}`. Заполнение списка остановится когда в списке будет 20 элементов.-->
+<!--У четных элементов будет зеленый фон а у нечетных фиолетовый.-->
+
+
+<button onclick="document.body.style.background = 'orange'" >Orange</button>
+<ol id="ol" ></ol>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.style.background = 'red';
+        setTimeout(() => {
+            document.body.style.background = 'green';
+        }, 3000);
+
+        addLiToOl();
+    });
+
+    function addLiToOl() {
+        let i = 1;
+        let ol = document.getElementById('ol');
+
+        let interval = setInterval(() => {
+            if (i < 21) {
+                let li = document.createElement('li');
+                li.style.background = i % 2 === 0 ? 'lightgreen' : 'violet';
+                li.innerHTML = `Element ${i}`;
+                ol.append(li);
+                i++
+            }else clearInterval(interval);
+
+        }, 2000)
+    }
+
+</script>
+
+</body>
+</html>

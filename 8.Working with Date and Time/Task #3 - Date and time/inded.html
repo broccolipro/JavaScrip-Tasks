@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .value {
+            width: 30px;
+        }
+    </style>
+</head>
+<body>
+<pre>
+        Задача №3 - Работа с датой и временем
+    Создать таймер обратного отсчета времени.
+    При открытии страницы, пользователь видит инпуты:
+    ● дней (значения от 0 до 30)
+    ● часов (значения от 0 до 24)
+    ● минут (значения от 0 до 60)
+    и кнопку Запуск.
+    При нажатии кнопки запуск, начинает работать обратный отсчет времени, который
+    показывает сколько осталось времени, в формате “D дней, H часов, M минут”. При
+    достижении времени, выдать сообщение “Время пришло”
+    Уточнения:
+    20 из 37
+    ● пользователь должен заполнить хотя бы один из инпутов (дней, часов, минут).
+</pre>
+<input type="text" class="value" value="0">
+<label>Days (0 - 30)</label>
+<br>
+<input type="text" class="value" value="0">
+<label>Hours (0 - 24)</label>
+<br>
+<input type="text" class="value" value="0">
+<label>Minutes (0 - 60)</label>
+<br>
+<input type="text" class="value" value="0">
+<label>Seconds (0 - 60)</label>
+
+<h2>Time left:</h2>
+<div style="font-size: 30px">
+    <span class="clock">00</span>
+    <span>:</span>
+    <span class="clock">00</span>
+    <span>:</span>
+    <span class="clock">00</span>
+    <span>:</span>
+    <span class="clock">00</span>
+</div>
+
+<input type="button" id="start" value="Start">
+<input type="button" id="clear" value="Clear">
+<script src="index.js"></script>
+</body>
+</html>

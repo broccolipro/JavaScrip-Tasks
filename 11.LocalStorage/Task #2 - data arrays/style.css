@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+#todolist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Cambria", serif;
+}
+
+input{
+    height: 30px;
+}
+
+strong {
+    color: red;
+}
+
+
+strong:hover{
+    cursor: pointer;
+    background: #a64949;
+}
+
+li{
+    margin: 10px 10px 10px -20px;
+}

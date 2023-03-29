@@ -1,0 +1,13 @@
+.notification {
+    display: flex;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: cadetblue;
+    border: 2px solid green;
+    border-radius: 15px;
+    font-size: 30px;
+    color: burlywood;
+    align-items: center;
+    justify-content: center;
+}
